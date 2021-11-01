@@ -41,6 +41,7 @@ header{
     color:red;
     font-size: 23px;
     justify-content: center;
+    flex-direction: column;
 }
 
 .navMenu{
@@ -48,21 +49,32 @@ header{
     font-size: 18px;
 }
 
-.classPopup, .menuPopup{
-    position: absolute;
-    z-index: 3;
-}
-.classPopup{
-    height: 30%;
-    width: 50%;
-    background-color: orange;
-    display: hidden;
+.cart, .menu{
+    cursor:pointer;
 }
 
+.cartPopup, .menuPopup{
+    position: fixed;
+    z-index: 3;    
+    height:100vh;
+    transition:all 0.4s;
+}
+.cartPopup{
+    right:-40%;
+    width: 40%;
+    background-color: orange;
+}
 .menuPopup{
-    height: 30%;
-    width: 50%;
+    top:-100%;
+    width: 100%;
     background-color: purple;
+}
+
+.menuPopup.open{
+    top:0;
+}
+.cartPopup.open{
+    right:0;
 }
 
 .scrollBar{
@@ -81,17 +93,51 @@ header{
 .P1title{
     color: aliceblue;
     justify-content: center;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.P1title>div{
+    padding: 60px;
+}
+
+.P1title div{
+    font-size: 120px;
+    color: #38524F;
 }
 
 .Page2{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
     background-color: blueviolet;
+    grid-gap:60px;
 }
 
 .P2Img1{
-    width: 40%;
+    padding:60px 0 60px 60px;
 }
 
-.P2Img2{
-    width: 40%;
-    justify-self: flex-end;
+.cropped{
+    width:100%;
+    height:700px;
+    overflow:hidden;
+}
+
+.P2Img1 img{
+    transform: scale(2.3);
+}
+
+.P2Img1 img, .P2Img2 img{
+    width:100%;
+}
+
+.P2Img2{  
+    padding:60px 60px 60px 0;  
+}
+
+.columnText{
+    padding:60px;
 }
