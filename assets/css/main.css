@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+
+*{
+
+}
+
+body{
+    background-color: rgb(217, 225, 204);
+    display:flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+header{
+    /* background-color: crimson; */
+    width: 100%;
+    height: 10%;
+    align-content: center;
+    position: fixed;
+}
+
+.topMenu{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.title, .navMenu{
+    display:flex;
+    border-style: dashed;
+    border-color: chartreuse;
+    width: 15%;
+    font-family: 'Crete Round', serif;
+    font-weight: 350;
+    -webkit-font-smoothing: antialiased;
+    text-align: center;
+    justify-content: space-around;
+    margin: 2%;
+}
+.title{
+    color:red;
+    font-size: 23px;
+    justify-content: center;
+}
+
+.navMenu{
+    color:red;
+    font-size: 18px;
+}
+
+.classPopup, .menuPopup{
+    position: absolute;
+    z-index: 3;
+}
+.classPopup{
+    height: 30%;
+    width: 50%;
+    background-color: orange;
+    display: hidden;
+}
+
+.menuPopup{
+    height: 30%;
+    width: 50%;
+    background-color: purple;
+}
+
+.scrollBar{
+    display: flex;
+    background-color: darkblue;
+}
+
+.Page1{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 90%;
+    background-color: blue;
+}
+
+.P1title{
+    color: aliceblue;
+    justify-content: center;
+}
+
+.Page2{
+    background-color: blueviolet;
+}
+
+.P2Img1{
+    width: 40%;
+}
+
+.P2Img2{
+    width: 40%;
+    justify-self: flex-end;
+}
