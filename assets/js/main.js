@@ -39,3 +39,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     delayMouseFollow();
 });
+
+
+mouseCircle = document.querySelector('#mouse-circle');
+
+let links = document.querySelectorAll(".hover");
+
+links.forEach(link =>{
+
+    link.addEventListener("mouseover", event =>{
+
+        mouseCircle.style.backdropFilter = "invert(100%)";
+
+    })
+
+})
+
+links.forEach(link =>{
+
+    link.addEventListener("mouseout", event =>{
+
+        mouseCircle.style.backdropFilter = "invert(0%)";
+
+    })
+
+})
