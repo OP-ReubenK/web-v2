@@ -4,8 +4,19 @@
 
 }
 
+#mouse-circle {
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: -32px 0 0 -32px;
+    border: 1px solid #0f1c64;
+    border-radius: 50%;
+    pointer-events: none;
+    backdrop-filter: invert(100%);
+}
+
 body{
-    background-color: rgb(217, 225, 204);
+    background-color: rgb(235, 234, 228);
     display:flex;
     flex-direction: column;
     margin: 0;
@@ -27,8 +38,8 @@ header{
 
 .title, .navMenu{
     display:flex;
-    border-style: dashed;
-    border-color: chartreuse;
+    /* border-style: dashed; */
+    /* border-color: chartreuse; */
     width: 15%;
     font-family: 'Crete Round', serif;
     font-weight: 350;
@@ -39,14 +50,25 @@ header{
 }
 .title{
     color:red;
-    font-size: 23px;
     justify-content: center;
     flex-direction: column;
+}
+
+.disc{
+    font-size: 23px;
+}
+
+.wild{
+    font-size: 12px;
 }
 
 .navMenu{
     color:red;
     font-size: 18px;
+}
+
+.title, .cart, .menu{
+    color: #38524F;
 }
 
 .cart, .menu, .cartClose, .menuClose{
@@ -67,7 +89,7 @@ header{
 .menuPopup{
     top:-100%;
     width: 100%;
-    background-color: purple;
+    background-color: lightcoral;
 }
 
 .menuPopup.open{
@@ -87,13 +109,13 @@ header{
     flex-direction: column;
     height: 100%;
     width: 90%;
-    background-color: blue;
+    /* background-color: blue; */
 }
 
 .P1title{
     color: aliceblue;
     justify-content: center;
-    height: 80vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -116,7 +138,7 @@ header{
     grid-gap:60px;
 }
 
-.P2Img1{
+.Column1{
     padding:60px 0 60px 60px;
 }
 
@@ -126,15 +148,15 @@ header{
     overflow:hidden;
 }
 
-.P2Img1 img{
+.Column1 img{
     transform: scale(2.3);
 }
 
-.P2Img1 img, .P2Img2 img{
+.Column1 img, .Column2 img{
     width:100%;
 }
 
-.P2Img2{  
+.Column2{  
     padding:60px 60px 60px 0;  
 }
 
