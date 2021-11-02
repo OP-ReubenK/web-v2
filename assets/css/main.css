@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
+@import url(//db.onlinewebfonts.com/c/0a0cbbd2ee416efdde8260f3aafa0d14?family=Morion+Bold);
 
 *{
 
@@ -127,6 +128,7 @@ header{
 }
 
 .P1title div{
+    font-family: "Morion Bold";
     font-size: 120px;
     color: #38524F;
 }
