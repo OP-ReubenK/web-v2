@@ -49,7 +49,7 @@ header{
     font-size: 18px;
 }
 
-.cart, .menu{
+.cart, .menu, .cartClose, .menuClose{
     cursor:pointer;
 }
 
