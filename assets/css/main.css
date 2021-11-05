@@ -49,6 +49,14 @@ header{
     justify-content: space-around;
     margin: 2%;
 }
+.leftTitle{
+border-style: dashed;
+border-color: chartreuse;
+width: 20%;
+align-items: column;
+margin: 5% 5% 5% 5%;
+}
+
 .title{
     justify-content: center;
     align-items: center;
