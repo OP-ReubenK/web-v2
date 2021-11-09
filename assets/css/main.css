@@ -20,6 +20,7 @@ body{
     background-color: rgb(235, 234, 228);
     display:flex;
     flex-direction: column;
+    overflow-x: hidden;
     margin: 0;
 }
 
@@ -37,7 +38,7 @@ header{
     width: 100%;
 }
 
-.title, .navMenu{
+.navMenu{
     display:flex;
     /* border-style: dashed; */
     /* border-color: chartreuse; */
@@ -49,19 +50,27 @@ header{
     justify-content: space-around;
     margin: 2%;
 }
+
 .leftTitle{
-border-style: dashed;
-border-color: chartreuse;
-width: 20%;
-align-items: column;
-margin: 5% 5% 5% 5%;
+    border-style: dashed;
+    border-color: chartreuse;
+    margin-top: 2%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
 }
 
 .title{
-    justify-content: center;
+    display: flex;
     align-items: center;
-    flex-direction: row;
+    justify-content: center;
     font-size: 150%;
+}
+
+.subTitle{
+    text-align: center;
+    margin-top: -10px;
+    font-size: small;
 }
 
 .title span{
