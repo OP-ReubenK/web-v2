@@ -64,3 +64,13 @@ links.forEach(link =>{
     })
 
 })
+
+
+fetch('https://api.unsplash.com/search/photos?client_id=OrrzZqBn3r88laW2SdFxIes6Q8aAxa76qT__CdZuThE&query=venison')
+.then(res => {
+    return res.json();
+})
+.then(data => {
+    console.log(data);
+});
+
