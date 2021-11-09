@@ -83,19 +83,6 @@ header{
     font-size: 155%;
 }
 
-/* .disc{   
-
-}
-
-.D{
-    color: yellowgreen;
-    font-size: 255%;
-}
-
-.isco{
-
-} */
-
 .wild{
     font-size: 100%;
 }
@@ -201,4 +188,15 @@ header{
 
 .columnText{
     padding:60px;
+}
+
+.sideScroll{
+display: flex;
+flex-flow: column nowrap;
+max-height: 1000px;
+overflow-x: auto;
+}
+
+.scrollImg{
+    height: 800px;
 }

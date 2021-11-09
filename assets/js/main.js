@@ -1,3 +1,4 @@
+// <-- Mouse Circle -->
 document.querySelector(".cart").addEventListener("click", (event) => {
     document.querySelector(".cartPopup").classList.toggle("open");
 })
@@ -65,12 +66,23 @@ links.forEach(link =>{
 
 })
 
-
-fetch('https://api.unsplash.com/search/photos?client_id=OrrzZqBn3r88laW2SdFxIes6Q8aAxa76qT__CdZuThE&query=venison')
+// <-- API -->
+fetch('https://api.unsplash.com/search/photos?client_id=OrrzZqBn3r88laW2SdFxIes6Q8aAxa76qT__CdZuThE&query=bbq')
 .then(res => {
     return res.json();
 })
 .then(data => {
-    console.log(data);
+    let scrollDiv = document.querySelector(".ScrollItems");
+    data.results.forEach(RecipeIMG => {
+        //make a div first
+        let img = document.createElement("img");
+        img.src = RecipeIMG.urls.regular;
+
+        img.classList.add("scrollImg");
+
+        //div append img
+        //scrolldiv append div
+        scrollDiv.append(img);
+    });
 });
 
