@@ -19,7 +19,8 @@
     border: 1px solid #0f1c64;
     border-radius: 50%;
     pointer-events: none;
-    /* backdrop-filter: invert(100%); */
+    transition: transform 1s, backdrop-filter 1s;
+    z-index: 5;
 }
 
 body{
@@ -31,7 +32,6 @@ body{
 }
 
 header{
-    /* background-color: crimson; */
     width: 100%;
     height: 10%;
     align-content: center;
@@ -46,8 +46,6 @@ header{
 
 .navMenu{
     display:flex;
-    /* border-style: dashed; */
-    /* border-color: chartreuse; */
     width: 15%;
     font-family: 'Crete Round', serif;
     font-weight: 350;
@@ -58,12 +56,24 @@ header{
 }
 
 .leftTitle{
-    border-style: dashed;
-    border-color: chartreuse;
     margin-top: 2%;
     margin-left: 3%;
     display: flex;
     flex-direction: column;
+    text-decoration: none;
+}
+
+a:link{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
 }
 
 .title{
@@ -75,6 +85,7 @@ header{
 
 .subTitle{
     text-align: center;
+    color: black;
     margin-top: -10px;
     font-size: small;
 }
@@ -88,7 +99,6 @@ header{
 }
 
 .navMenu{
-    color:red;
     font-size: 18px;
 }
 
@@ -134,7 +144,6 @@ header{
     flex-direction: column;
     height: 100%;
     width: 90%;
-    /* background-color: blue; */
 }
 
 .P1title{
@@ -160,8 +169,9 @@ header{
 .Page2{
     display:grid;
     grid-template-columns: 1fr 1fr;
-    background-color: blueviolet;
+    /* background-color: #38524F; */
     grid-gap:60px;
+    z-index: -400;
 }
 
 .Column1{
@@ -172,10 +182,14 @@ header{
     width:100%;
     height:700px;
     overflow:hidden;
+    border-radius: 30px;
+
 }
 
 .Column1 img{
     transform: scale(2.3);
+    border-radius: 30px;
+
 }
 
 .Column1 img, .Column2 img{
@@ -186,17 +200,28 @@ header{
     padding:60px 60px 60px 0;  
 }
 
+.Column2 img{
+    border-radius: 30px;
+}
+
 .columnText{
     padding:60px;
 }
 
-.sideScroll{
-display: flex;
-flex-flow: column nowrap;
-max-height: 1000px;
-overflow-x: auto;
+.active{
+    transform: scale(1);
 }
 
-.scrollImg{
+.SideScroll{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.ScrollImg{
+    border-radius: 30px;
+    border: indigo;
+    padding: 20px;
+    width: 100%;
     height: 800px;
 }
+
