@@ -1,7 +1,3 @@
-// Adding Layouts
-const expressLayouts = require('express-ejs-layouts')
-app.use(expressLayouts)
-
 // <-- Mouse Circle -->
 /* This generates the circle that follows the mouse. I tried to condense it down but it caused it to break and
 I was unsure how to solve, so I have left it as it was for now*/ 
@@ -69,7 +65,7 @@ links.forEach(link =>{
 
 // <-- API -->
 /* The API fetches a series of images from unsplash.com. the query is for "bbq",
-these images ar ethen displayed in the side scrolling bar*/
+these images are then displayed in the side scrolling bar*/
 fetch('https://api.unsplash.com/search/photos?client_id=OrrzZqBn3r88laW2SdFxIes6Q8aAxa76qT__CdZuThE&query=bbq')
 .then(res => {
     return res.json();

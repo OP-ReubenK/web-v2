@@ -8,6 +8,10 @@
     url("Morion\ Bold/@font-face/0a0cbbd2ee416efdde8260f3aafa0d14.svg#Morion Bold") format("svg"); /* iOS 4.1- */
   }
 
+  *{
+
+  }
+  
 /* Hover mouse styling*/
 #mouse-circle {
     position: absolute;
