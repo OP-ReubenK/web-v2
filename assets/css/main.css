@@ -26,7 +26,7 @@
 }
 
 body{
-    background-color: rgb(235, 234, 228);
+    background-color: rgb235, 234, 228();
     display:flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -102,7 +102,7 @@ a:link, a:visited, a:hover, a:active{
 }
 
 /* Font colour control */
-.title, .cart, .menu, .colTextHeader, .colTextContent{ 
+.title, .cart, .menu, .cartPopup, .menuPopup .colTextHeader, .colTextContent{ 
     color: #38524F;
 }
 
@@ -116,7 +116,19 @@ a:link, a:visited, a:hover, a:active{
 .cartPopup{
     right:-40%;
     width: 40%;
-    background-color: orange;
+    border-left:2px;
+    border-left-style: solid;
+    box-sizing: border-box;
+    background-color: rgb(235, 234, 228);
+    display: flex;
+    flex-direction: column;
+    padding-left: 1%;
+
+}
+
+.cartPopup .cartClose{
+    flex: right;
+
 }
 .menuPopup{
     top:-100%;
@@ -157,6 +169,10 @@ a:link, a:visited, a:hover, a:active{
     font-family: "Morion Bold";
     font-size: 20vh;
     color: #38524F;
+}
+
+.P1Image{
+    width:90%;
 }
 
 /* Content after main page image and title*/
