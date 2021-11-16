@@ -1,4 +1,11 @@
 // <-- Mouse Circle -->
+
+// document.querySelectorAll(".cart, .cartClose").forEach(el => {
+//     el.addEventListener("click", (event) => {
+//         document.querySelector(".cartPopup").classList.toggle("open");
+// })
+
+
 document.querySelector(".cart").addEventListener("click", (event) => {
     document.querySelector(".cartPopup").classList.toggle("open");
 })
