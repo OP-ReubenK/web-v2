@@ -1,3 +1,7 @@
+// Adding Layouts
+const expressLayouts = require('express-ejs-layouts')
+app.use(expressLayouts)
+
 // <-- Mouse Circle -->
 /* This generates the circle that follows the mouse. I tried to condense it down but it caused it to break and
 I was unsure how to solve, so I have left it as it was for now*/ 
