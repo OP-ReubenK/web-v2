@@ -38,6 +38,16 @@ header{
     position: fixed;
 }
 
+/* Mouse hover controls*/
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+.cart, .menu, .cartClose, .menuClose{
+    cursor:pointer;
+}
+
+/* Discovered wildfoods clickable in top left, Cart and Menu in top right */
 .topMenu{
     display: flex;
     justify-content: space-between;
@@ -60,10 +70,6 @@ header{
     margin-left: 3%;
     display: flex;
     flex-direction: column;
-    text-decoration: none;
-}
-
-a:link, a:visited, a:hover, a:active{
     text-decoration: none;
 }
 
@@ -93,14 +99,12 @@ a:link, a:visited, a:hover, a:active{
     font-size: 3vh;
 }
 
+/* Font colour control */
 .title, .cart, .menu, .colTextHeader, .colTextContent{ 
     color: #38524F;
 }
 
-.cart, .menu, .cartClose, .menuClose{
-    cursor:pointer;
-}
-
+/* Styling for the 2 hidden pages for Cart and Menu*/
 .cartPopup, .menuPopup{
     position: fixed;
     z-index: 3;    
@@ -118,19 +122,15 @@ a:link, a:visited, a:hover, a:active{
     background-color: lightcoral;
 }
 
-.menuPopup.open{git add .
-    
+.menuPopup.open{    
     top:0;
 }
 .cartPopup.open{
     right:0;
 }
+/* End of Header */
 
-.scrollBar{
-    display: flex;
-    background-color: darkblue;
-}
-
+/* Main page beginning at Title (Wild, sustainable, delicious) */
 .Page1{
     display: flex;
     flex-direction: column;
@@ -139,10 +139,9 @@ a:link, a:visited, a:hover, a:active{
 }
 
 .P1title{
-    /* color: aliceblue; */
     justify-content: center;
     height:80vh;
-    /* width: 60vw; */
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -159,6 +158,7 @@ a:link, a:visited, a:hover, a:active{
     color: #38524F;
 }
 
+/* Content after main page image and title*/
 .Page2{
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -174,14 +174,10 @@ a:link, a:visited, a:hover, a:active{
     width:100%;
     height:60vh;
     overflow:hidden;
-    /* border-radius: 30px; */
-    /* transform: rotate(90); */
-
 }
 
 .Column1 img{
     transform: scale(2.3);
-    /* border-radius: 30px; */
 
 }
 
@@ -194,28 +190,10 @@ a:link, a:visited, a:hover, a:active{
 }
 
 .Column2 img{
-    /* border-radius: 30px; */
 }
 
 .columnText{
     padding:60px;
-}
-
-.active{
-    transform: scale(1);
-}
-
-.SideScroll{
-    display: flex;
-    overflow-x: scroll;
-}
-
-.ScrollImg{
-    /* border-radius: 30px; */
-    border: indigo;
-    padding: 20px;
-    width: 100%;
-    height: 800px;
 }
 
 .colTextHeader{
@@ -227,3 +205,21 @@ a:link, a:visited, a:hover, a:active{
     font-size: 3vh;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+/* End of Page 2 content */
+
+/* Side scrolling content */
+.active{
+    transform: scale(1);
+}
+
+.SideScroll{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.ScrollImg{
+    padding: 20px;
+    width: 100%;
+    height: 800px;
+}
+
