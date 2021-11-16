@@ -3,7 +3,7 @@
 // document.querySelectorAll(".cart, .cartClose").forEach(el => {
 //     el.addEventListener("click", (event) => {
 //         document.querySelector(".cartPopup").classList.toggle("open");
-// })
+// }) <-- Broke the mouse circle when attempted -->
 
 
 document.querySelector(".cart").addEventListener("click", (event) => {

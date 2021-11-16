@@ -118,7 +118,8 @@ a:link, a:visited, a:hover, a:active{
     background-color: lightcoral;
 }
 
-.menuPopup.open{
+.menuPopup.open{git add .
+    
     top:0;
 }
 .cartPopup.open{
@@ -138,7 +139,7 @@ a:link, a:visited, a:hover, a:active{
 }
 
 .P1title{
-    color: aliceblue;
+    /* color: aliceblue; */
     justify-content: center;
     height:80vh;
     /* width: 60vw; */
