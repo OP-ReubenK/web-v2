@@ -150,7 +150,14 @@ a:link, a:visited, a:hover, a:active{
 .menuPopup{
     top:-100%;
     width: 100%;
+    background-color: coral;
+    display: flex;
 }
+
+.menuClose{
+    font-size: 3vh;
+}
+
 .menuPopup.open{    
     top:0;
 }
