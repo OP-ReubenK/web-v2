@@ -11,11 +11,16 @@ document.querySelector(".cartClose").addEventListener("click", (event) => {
 // Menu controls (menu differs from cart as it is a toggle)
 document.querySelector(".menu").addEventListener("click", (event) => {
     document.querySelector(".menuPopup").classList.toggle("open");
-})
-document.querySelector(".menuClose").addEventListener("click", (event) => {
-    document.querySelector(".menuPopup").classList.toggle("open");
-})
+    if(document.querySelector(".menuPopup").classList.contains("open")){
+        document.querySelector(".menu").innerHTML="Close";
+        document.body.style.color = "white";
 
+        document.querySelector(".cart").innerHTML="  ";
+    }else{
+        document.querySelector(".menu").innerHTML="Menu";
+        document.querySelector(".cart").innerHTML="Cart";
+    }
+})
 
 document.addEventListener('DOMContentLoaded', () => {
     let mousePosX = 0,

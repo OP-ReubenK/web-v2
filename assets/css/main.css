@@ -48,7 +48,6 @@ a:link, a:visited, a:hover, a:active{
 
 .cart, .menu, .cartClose, .menuClose{
     cursor:pointer;
-    background-color: red;
 }
 
 /* Discovered wildfoods clickable in top left, Cart and Menu in top right */
@@ -146,18 +145,14 @@ a:link, a:visited, a:hover, a:active{
     padding-bottom: 1vh;
 }
 
-/*Nav*/.menu{
-}
-
-.menuClose{
-    font-size: 3vh;
-    justify-self: flex-end;
-}
-
 .menuPopup{
     top:-100%;
     width: 100%;
-    background-color: coral;
+    /* background-color: coral; */
+    background-image: url(../img/leaf.jpg);
+    filter: hue-rotate(90deg);
+    filter:brightness(50%);
+    /* mix-blend-mode: difference; */
     display: flex;
 }
 
