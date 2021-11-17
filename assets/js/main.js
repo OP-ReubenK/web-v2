@@ -13,11 +13,20 @@ document.querySelector(".menu").addEventListener("click", (event) => {
     document.querySelector(".menuPopup").classList.toggle("open");
     if(document.querySelector(".menuPopup").classList.contains("open")){
         document.querySelector(".menu").innerHTML="Close";
-        document.body.style.color = "white";
+        document.querySelector(".menu").classList.toggle("activeMenu");
+
+        document.querySelector(".title").classList.toggle("activeMenu");
+        document.querySelector(".subTitle").classList.toggle("activeMenu");
 
         document.querySelector(".cart").innerHTML="  ";
     }else{
         document.querySelector(".menu").innerHTML="Menu";
+        document.querySelector(".menu").classList.toggle("activeMenu");
+        document.querySelector(".title").classList.toggle("activeMenu");
+        document.querySelector(".subTitle").classList.toggle("activeMenu");
+
+
+
         document.querySelector(".cart").innerHTML="Cart";
     }
 })

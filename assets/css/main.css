@@ -104,6 +104,10 @@ a:link, a:visited, a:hover, a:active{
     color: #38524F;
 }
 
+.activeMenu{
+    color:white !important;
+}
+
 /* Styling for the 2 hidden pages for Cart and Menu*/
 .cartPopup, .menuPopup{
     font-family: "Morion Bold";
@@ -148,11 +152,10 @@ a:link, a:visited, a:hover, a:active{
 .menuPopup{
     top:-100%;
     width: 100%;
-    /* background-color: coral; */
     background-image: url(../img/leaf.jpg);
     filter: hue-rotate(90deg);
     filter:brightness(50%);
-    /* mix-blend-mode: difference; */
+    filter: saturate(75%);
     display: flex;
 }
 
