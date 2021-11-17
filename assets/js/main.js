@@ -1,24 +1,22 @@
-// <-- Mouse Circle -->
-/* This generates the circle that follows the mouse. I tried to condense it down but it caused it to break and
-I was unsure how to solve, so I have left it as it was for now*/ 
+// JS for making the cart and menu hide and appear on click
 
-// document.querySelectorAll(".cart, .cartClose").forEach(el => {
-//     el.addEventListener("click", (event) => {
-//         document.querySelector(".cartPopup").classList.toggle("open");
-// }) <-- Broke the mouse circle when attempted -->
-
+// Cart controls
 document.querySelector(".cart").addEventListener("click", (event) => {
     document.querySelector(".cartPopup").classList.toggle("open");
 })
 document.querySelector(".cartClose").addEventListener("click", (event) => {
     document.querySelector(".cartPopup").classList.toggle("open");
 })
+
+// Menu controls (menu differs from cart as it is a toggle)
 document.querySelector(".menu").addEventListener("click", (event) => {
     document.querySelector(".menuPopup").classList.toggle("open");
 })
 document.querySelector(".menuClose").addEventListener("click", (event) => {
     document.querySelector(".menuPopup").classList.toggle("open");
 })
+
+
 document.addEventListener('DOMContentLoaded', () => {
     let mousePosX = 0,
         mousePosY = 0,
@@ -44,6 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
     delayMouseFollow();
 });
 
+// <-- Mouse Circle -->
 mouseCircle = document.querySelector('#mouse-circle');
 let links = document.querySelectorAll(".hover");
 links.forEach(link =>{

@@ -38,6 +38,7 @@ header{
     height: 10%;
     align-content: center;
     position: fixed;
+    z-index: 4;
 }
 
 /* Mouse hover controls*/
@@ -47,6 +48,7 @@ a:link, a:visited, a:hover, a:active{
 
 .cart, .menu, .cartClose, .menuClose{
     cursor:pointer;
+    background-color: red;
 }
 
 /* Discovered wildfoods clickable in top left, Cart and Menu in top right */
@@ -65,6 +67,7 @@ a:link, a:visited, a:hover, a:active{
     text-align: center;
     justify-content: space-around;
     margin: 2%;
+    font-size: 3vh;
 }
 
 .leftTitle{
@@ -97,10 +100,6 @@ a:link, a:visited, a:hover, a:active{
     font-size: 100%;
 }
 
-.navMenu{
-    font-size: 3vh;
-}
-
 /* Font colour control */
 .title, .cart, .menu, .cartPopup, .menuPopup .colTextHeader, .colTextContent{ 
     color: #38524F;
@@ -110,7 +109,7 @@ a:link, a:visited, a:hover, a:active{
 .cartPopup, .menuPopup{
     font-family: "Morion Bold";
     position: fixed;
-    z-index: 3;    
+    /* z-index: 3;     */
     height:100vh;
     transition:all 0.4s;
 }
@@ -125,7 +124,7 @@ a:link, a:visited, a:hover, a:active{
     flex-direction: column;
     padding-left: 2vw;
     padding-top: 9vh;
-    /* display: block inline; */
+    z-index: 5;
 }
 
 .cartHeader{
@@ -143,10 +142,18 @@ a:link, a:visited, a:hover, a:active{
 .cartClose{
     font-size: 2vh;
     align-self: flex-end;
-    /* padding:1vh; */
     padding-right: 3vh;
     padding-bottom: 1vh;
 }
+
+/*Nav*/.menu{
+}
+
+.menuClose{
+    font-size: 3vh;
+    justify-self: flex-end;
+}
+
 .menuPopup{
     top:-100%;
     width: 100%;
@@ -154,13 +161,10 @@ a:link, a:visited, a:hover, a:active{
     display: flex;
 }
 
-.menuClose{
-    font-size: 3vh;
-}
-
 .menuPopup.open{    
     top:0;
 }
+
 .cartPopup.open{
     right:0;
 }
