@@ -124,17 +124,28 @@ a:link, a:visited, a:hover, a:active{
     display: flex;
     flex-direction: column;
     padding-left: 2vw;
-    padding-top: 4vh;
+    padding-top: 9vh;
+    /* display: block inline; */
 }
 
 .cartHeader{
-    font-size: 5vh;
+    font-size: 6vh;
+    display: flex;
+    justify-content: space-between;
 }
 
-.cartPopup .cartClose{
-    font-size: 3vh;
+.cartContents{
+    font-size: 4vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.cartClose{
+    font-size: 2vh;
     align-self: flex-end;
-    padding:1vh;
+    /* padding:1vh; */
+    padding-right: 3vh;
+    padding-bottom: 1vh;
 }
 .menuPopup{
     top:-100%;
