@@ -1,16 +1,36 @@
-// <-- Mouse Circle -->
+// JS for making the cart and menu hide and appear on click
+
+// Cart controls
 document.querySelector(".cart").addEventListener("click", (event) => {
     document.querySelector(".cartPopup").classList.toggle("open");
 })
 document.querySelector(".cartClose").addEventListener("click", (event) => {
     document.querySelector(".cartPopup").classList.toggle("open");
 })
+
+// Menu controls (menu differs from cart as it is a toggle)
 document.querySelector(".menu").addEventListener("click", (event) => {
     document.querySelector(".menuPopup").classList.toggle("open");
+    if(document.querySelector(".menuPopup").classList.contains("open")){
+        document.querySelector(".menu").innerHTML="Close";
+        document.querySelector(".menu").classList.toggle("activeMenu");
+
+        document.querySelector(".title").classList.toggle("activeMenu");
+        document.querySelector(".subTitle").classList.toggle("activeMenu");
+
+        document.querySelector(".cart").innerHTML="  ";
+    }else{
+        document.querySelector(".menu").innerHTML="Menu";
+        document.querySelector(".menu").classList.toggle("activeMenu");
+        document.querySelector(".title").classList.toggle("activeMenu");
+        document.querySelector(".subTitle").classList.toggle("activeMenu");
+
+
+
+        document.querySelector(".cart").innerHTML="Cart";
+    }
 })
-document.querySelector(".menuClose").addEventListener("click", (event) => {
-    document.querySelector(".menuPopup").classList.toggle("open");
-})
+
 document.addEventListener('DOMContentLoaded', () => {
     let mousePosX = 0,
         mousePosY = 0,
@@ -36,6 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
     delayMouseFollow();
 });
 
+// <-- Mouse Circle -->
 mouseCircle = document.querySelector('#mouse-circle');
 let links = document.querySelectorAll(".hover");
 links.forEach(link =>{
@@ -56,6 +77,8 @@ links.forEach(link =>{
 })
 
 // <-- API -->
+/* The API fetches a series of images from unsplash.com. the query is for "bbq",
+these images are then displayed in the side scrolling bar*/
 fetch('https://api.unsplash.com/search/photos?client_id=OrrzZqBn3r88laW2SdFxIes6Q8aAxa76qT__CdZuThE&query=bbq')
 .then(res => {
     return res.json();
@@ -119,4 +142,3 @@ slider.addEventListener('mouseleave', () => {
     slider.scrollLeft = scrollLeft - walk;  
     console.log(walk);  
   });
-

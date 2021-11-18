@@ -1,3 +1,4 @@
+/* Adding in the fonts via links*/
 @import url('https://fonts.googleapis.com/css2?family=Crete+Round&display=swap');
 @font-face {font-family: "Morion Bold";
     src:
@@ -7,10 +8,11 @@
     url("Morion\ Bold/@font-face/0a0cbbd2ee416efdde8260f3aafa0d14.svg#Morion Bold") format("svg"); /* iOS 4.1- */
   }
 
-*{
+  *{
 
-}
-
+  }
+  
+/* Hover mouse styling*/
 #mouse-circle {
     position: absolute;
     width: 64px;
@@ -24,7 +26,7 @@
 }
 
 body{
-    background-color: rgb(235, 234, 228);
+    background-color: rgb235, 234, 228();
     display:flex;
     flex-direction: column;
     overflow-x: hidden;
@@ -36,8 +38,19 @@ header{
     height: 10%;
     align-content: center;
     position: fixed;
+    z-index: 4;
 }
 
+/* Mouse hover controls*/
+a:link, a:visited, a:hover, a:active{
+    text-decoration: none;
+}
+
+.cart, .menu, .cartClose, .menuClose{
+    cursor:pointer;
+}
+
+/* Discovered wildfoods clickable in top left, Cart and Menu in top right */
 .topMenu{
     display: flex;
     justify-content: space-between;
@@ -53,6 +66,7 @@ header{
     text-align: center;
     justify-content: space-around;
     margin: 2%;
+    font-size: 3vh;
 }
 
 .leftTitle{
@@ -60,19 +74,6 @@ header{
     margin-left: 3%;
     display: flex;
     flex-direction: column;
-    text-decoration: none;
-}
-
-a:link{
-    text-decoration: none;
-}
-a:visited{
-    text-decoration: none;
-}
-a:hover {
-    text-decoration: none;
-}
-a:active {
     text-decoration: none;
 }
 
@@ -98,47 +99,82 @@ a:active {
     font-size: 100%;
 }
 
-.navMenu{
-    font-size: 3vh;
-}
-
-.title, .cart, .menu, .colTextHeader, .colTextContent{ 
+/* Font colour control */
+.title, .cart, .menu, .cartPopup, .menuPopup .colTextHeader, .colTextContent{ 
     color: #38524F;
 }
 
-.cart, .menu, .cartClose, .menuClose{
-    cursor:pointer;
+.activeMenu{
+    color:white !important;
 }
 
+/* Styling for the 2 hidden pages for Cart and Menu*/
 .cartPopup, .menuPopup{
+    font-family: "Morion Bold";
     position: fixed;
-    z-index: 3;    
+    /* z-index: 3;     */
     height:100vh;
     transition:all 0.4s;
 }
 .cartPopup{
     right:-40%;
     width: 40%;
-    background-color: orange;
+    border-left:2px;
+    border-left-style: solid;
+    box-sizing: border-box;
+    background-color: rgb(235, 234, 228);
+    display: flex;
+    flex-direction: column;
+    padding-left: 2vw;
+    padding-top: 9vh;
+    z-index: 5;
 }
+
+.cartHeader{
+    font-size: 6vh;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cartContents{
+    font-size: 4vh;
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+}
+
+.cartClose{
+    font-size: 2vh;
+    align-self: flex-end;
+    padding-right: 3vh;
+    padding-bottom: 1vh;
+}
+
 .menuPopup{
     top:-100%;
     width: 100%;
-    background-color: lightcoral;
+    background-image: url(../img/leaf.jpg);
+    filter: hue-rotate(90deg);
+    filter:brightness(50%);
+    filter: saturate(75%);
+    display: flex;
 }
 
-.menuPopup.open{
+.menuPopup .Game{
+    display: block;
+    margin:auto;
+    width: 40%;
+}
+
+.menuPopup.open{    
     top:0;
 }
+
 .cartPopup.open{
     right:0;
 }
+/* End of Header */
 
-.scrollBar{
-    display: flex;
-    background-color: darkblue;
-}
-
+/* Main page beginning at Title (Wild, sustainable, delicious) */
 .Page1{
     display: flex;
     flex-direction: column;
@@ -147,10 +183,9 @@ a:active {
 }
 
 .P1title{
-    color: aliceblue;
     justify-content: center;
     height:80vh;
-    /* width: 60vw; */
+    width: auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -167,6 +202,11 @@ a:active {
     color: #38524F;
 }
 
+.P1Image{
+    width:90%;
+}
+
+/* Content after main page image and title*/
 .Page2{
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -182,14 +222,10 @@ a:active {
     width:100%;
     height:60vh;
     overflow:hidden;
-    /* border-radius: 30px; */
-    /* transform: rotate(90); */
-
 }
 
 .Column1 img{
     transform: scale(2.3);
-    /* border-radius: 30px; */
 
 }
 
@@ -202,28 +238,10 @@ a:active {
 }
 
 .Column2 img{
-    /* border-radius: 30px; */
 }
 
 .columnText{
     padding:60px;
-}
-
-.active{
-    transform: scale(1);
-}
-
-.SideScroll{
-    display: flex;
-    overflow-x: scroll;
-}
-
-.ScrollImg{
-    /* border-radius: 30px; */
-    border: indigo;
-    padding: 20px;
-    width: 100%;
-    height: 800px;
 }
 
 .colTextHeader{
@@ -235,3 +253,21 @@ a:active {
     font-size: 3vh;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+/* End of Page 2 content */
+
+/* Side scrolling content */
+.active{
+    transform: scale(1);
+}
+
+.SideScroll{
+    display: flex;
+    overflow-x: scroll;
+}
+
+.ScrollImg{
+    padding: 20px;
+    width: 100%;
+    height: 800px;
+}
+/* End of scroll*/
