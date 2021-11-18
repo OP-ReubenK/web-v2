@@ -142,4 +142,3 @@ slider.addEventListener('mouseleave', () => {
     slider.scrollLeft = scrollLeft - walk;  
     console.log(walk);  
   });
-
