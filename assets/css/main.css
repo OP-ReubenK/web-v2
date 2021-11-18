@@ -159,10 +159,10 @@ a:link, a:visited, a:hover, a:active{
     display: flex;
 }
 
-.menuPopup .Game{
+.menuPopup #Game{
     display: block;
-    margin:auto;
-    width: 40%;
+    margin: auto;
+    width: 40%;    
 }
 
 .menuPopup.open{    
@@ -235,9 +235,6 @@ a:link, a:visited, a:hover, a:active{
 
 .Column2{  
     padding:60px 60px 60px 0;  
-}
-
-.Column2 img{
 }
 
 .columnText{
