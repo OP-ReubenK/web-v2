@@ -9,6 +9,8 @@ document.querySelector(".cartClose").addEventListener("click", (event) => {
 })
 
 // Menu controls (menu differs from cart as it is a toggle)
+// Has function to swap the word "menu" to "close", makes the word "cart" vanish and 
+// colours the words white for readability.
 document.querySelector(".menu").addEventListener("click", (event) => {
     document.querySelector(".menuPopup").classList.toggle("open");
     if(document.querySelector(".menuPopup").classList.contains("open")){
@@ -24,9 +26,6 @@ document.querySelector(".menu").addEventListener("click", (event) => {
         document.querySelector(".menu").classList.toggle("activeMenu");
         document.querySelector(".title").classList.toggle("activeMenu");
         document.querySelector(".subTitle").classList.toggle("activeMenu");
-
-
-
         document.querySelector(".cart").innerHTML="Cart";
     }
 })
